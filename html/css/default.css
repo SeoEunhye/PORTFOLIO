@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+*{
+	cursor: url('http://eunhye032.dothome.co.kr/images/mouse.cur'), auto;
+	cursor: -webkit-image-set(url('http://eunhye032.dothome.co.kr/images/mouse.cur') 1x, url('http://eunhye032.dothome.co.kr/images/mouse.cur') 2x), auto;
+	-ms-overflow-style: none; 
+}
+/** a:hover,
+* a:hover * {
+    cursor: url('http://eunhye032.dothome.co.kr/images/mouse_on.cur'), auto;
+    cursor: -webkit-image-set(url('http://eunhye032.dothome.co.kr/images/mouse_on.cur') 1x, url('http://eunhye032.dothome.co.kr/images/mouse_on.cur') 2x), auto;
+}*/
+* a:hover,
+* a:hover{
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+display:none;
+} 
+
+
+body,h1,h2,h3,h4,h5,h6,p,dt,dd{
+    margin: 0;
+}
+body{
+	font-family: 'NotoSans',sans-serif;
+    overflow-x:hidden;
+    overflow-y:auto;
+	height: 100%;
+	width: 100%;
+}
+ol,ul,dl{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: #222;
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.cf:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    background: url(../images/mouse.cur);
+    background-size: cover;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+*/
+    

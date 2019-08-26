@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+/*반응형 웹*/
+.panel{display: none;}
+.rightmenu{display: none;}
+.mobileText{display: none;}
+
+/*반응형 모바일*/
+@media screen and (max-width:768px){
+	/*inner값 초기화*/
+	.inner{width: 100%;}
+	html, body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+	body {
+		overflow: hidden;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	/*header*/
+	#header{position: fixed;}
+	#header h1{
+		float: none;
+		margin: 0 auto;
+		background-size: 100px 19px;
+		line-height: 60px;
+        height: 30px;
+        padding: 20px;
+	}
+	.nav{display: none;}
+	.panel{
+		display: block;
+		position: absolute;
+		top:50%;
+		margin-top: -15px;
+		right: 20px;
+		cursor: pointer;
+	}
+		.rightmenu{
+			display: block;
+			background: rgba(0, 0, 0, 0.9);
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 0;
+			height: 100%;
+			bottom: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		.rightmenu ul{
+			padding: 30px;
+			padding-top: 100px;
+			text-align: center;
+		}
+		.rightmenu li{
+			margin: 0 auto;
+			width: 150px;
+			list-style: none;
+			line-height: 120px;
+			font-weight: 200;
+			font-size: 20px;
+		}
+		.rightmenu li a{
+			color: #fff;
+			text-decoration: none;
+		}
+		.rightmenu .closeBtn{
+			cursor: pointer;
+			position: absolute;
+			top: 25px;
+			right: 20px;
+			width: 25px;
+			height: 25px;
+			background: url(../images/menu_closed.png) no-repeat center center;
+			text-indent: -9999px;
+			background-size: cover;
+		}
+		.closeBtn img{
+		}
+		.rightmenu .home{
+			font-size: 20px;
+			font-weight: bold;
+			margin: 15px 0;
+		}
+		.rightMenuBg{
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.25);
+			position: fixed;
+			top: 0;
+		}
+	/*about*/
+	.face{
+		height: 750px;
+	}
+	.face img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -125px;
+		width: 250px;
+		height: 290px;
+	}
+	
+    /*title 수정*/
+    .portfolio h2{font-size: 60px; line-height: 50px;}
+    .portfolio h2:after{height: 2px;}
+    .whatIdoTitle{width: 184px;}
+    .whatIdoTitle h2{font-size: 60px; line-height: 70px; margin-bottom: -22px;}
+    .whatIdoTitle p{font-size: 60px; line-height: 80px;}
+    .whatIdoTitle p:after{height: 2px;}
+    .contact h2{font-size: 60px; line-height: 50px; right: -13px;}
+    .contact h2 p{letter-spacing: 22px;}
+    .contact h2 span{letter-spacing: 8px;}
+    .portfolio h2:after{height: 2px;}
+    /*title 수정*/
+    
+    
+	/*portfolio*/
+	.portfolio{padding-bottom: 250px;}
+	.portconWrap {
+		width: calc(100% - 20px);
+		box-sizing: border-box;
+		margin: 60px 10px;
+	}
+	.portconWrap div.portCon{
+		width: 100%;
+		position: static;
+	}
+	.imgWrap1,.imgWrap2{float: left; width:50%; box-sizing: border-box;}
+	.imgWrap1{padding-right: 5px;}
+	.imgWrap2{padding-top: 40px;padding-left: 5px;position: absolute;right: 0;top: 0;}
+	.portCon{height: 100%; padding: 0; margin: 0;}
+    .portconWrap .portCon1{margin-top: 40px;}
+	.portconWrap .portCon3{height: 100%;  margin-top: 10px; font-size: 18px; line-height: 100px;}
+	/*.portconWrap .portCon3 p{font-size: 18px; margin-top: 106px; margin-left: -150px;}*/
+	.portconWrap .portCon4{padding-top: 10px;}
+	.portCon img{width: 100%;}
+    
+    /*whatIdo(Radial Progress Bars)*/
+    .whatIdo{width: 100%; padding-bottom: 300px;}
+    
+	.zt-skill-bar{width: 50%; margin-left: 70px;}
+	.zt-skill-bar div{width: 50%; padding-left: 0;}
+	.ztWrap1,.ztWrap2{width: 50%; float: left;}
+	.ztWrap1{}
+	.character{margin-bottom: 30px;}
+	.character1,.character2{margin-left: 30px;}
+	.zt-span6 span{margin-left: 0;}
+	 /*whatIdo(Progress Bars)*/
+	.row{display: inline-block; padding: 0;}
+	.radial{width: 50%; margin: 0; text-align: center; padding-top: 50px;}
+	svg.radial-progress{max-width: 150px;}
+    
+    /*contact*/
+	#contact{height: 1700px;}
+    .contact{width: 100%;}
+    .contactBox1,.contactBox2{width: 100%;}
+    form{width: 100%; padding-top: 300px; margin-left: -3px;}
+    label{width: 100%;}
+	.name,.email{padding-top: 0;}
+	.contactBox2{padding-top: 200px; padding-right: 15px; width: 100%; text-align: right;}
+	.thankyou_message{margin: 0 auto; padding-top: 0; width: 200px; height: 316px; background-size: cover; background-position: 0px 0px;}
+    .thankyou_message h4{padding-top: 215px; font-size: 22px;}
+    .thankyou_message p{margin-top: 5px; font-size: 15px;}
+    .mobileText{display: block; line-height: 16px;}
+    .webText{display: none;}

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*반응형 웹*/
+/*반응형 모바일*/
+@media screen and (max-width:768px){
+	/*inner값 초기화*/
+	.inner{width: 100%;}
+	
+	/*body*/
+    .intro{font-size: 0;}
+    .counter{width: calc(50% - 50px); font-size: 80px; display: inline-block;}
+    .myFace{width: calc(50% - 50px); display: inline-block;}
+    .outline{width: 100%; font-size:80px;}
+    
+	.blinkEle{
+		position: fixed;
+		top: -250px;
+		right: -142px;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+	}

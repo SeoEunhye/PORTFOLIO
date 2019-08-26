@@ -1,0 +1,611 @@
+@charset "UTF-8";
+
+/*전체시작*/
+#bodyWrap{
+}
+
+/*header*/
+#header{
+	position: fixed;
+	z-index: 10;
+	background: rgba(255,255,255,0.8);
+	top: 0;
+	width: 100%;
+}
+#header h1{
+    float: left;
+    background: url(../images/logo.png) no-repeat center center;
+    width: 238px;
+    height: 46px;
+    text-indent: -9999px;
+    padding: 30px 20px;
+}
+#header h1 a{
+    height: 100%;
+}
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: rgba(240, 240, 240, 0.5);
+}
+.progress-bar {
+  height: 3px;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  width: 0%;
+}
+.nav{
+    float: right;
+   	height: 106px;
+	line-height: 80px;
+}
+.nav li{
+    float: left;
+	width: 240px;
+}
+.nav li:last-child{
+    margin-right: 0;
+}
+.nav li:last-child{
+    margin-left: 0;
+}
+.nav li a{
+    padding: 20px;
+    font-weight: 200;
+    font-size: 20px;
+}
+.nav li a:after{
+	content: "";
+	display: block;
+	width: 0px;
+	height: 1px;
+	background: #000;
+	margin-top: -20px;
+	transition: width 1s;
+}
+.nav li a:hover:after{
+	width: 170px;
+}
+/*container*/
+#container{}
+/*about*/
+.about{
+    text-align: center;
+    position: relative;
+	margin-bottom: 200px;
+}
+/*
+.about p{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 200;
+}*/
+.face{
+	height: 1000px;
+}
+.face img{
+	position: absolute;
+	top: 50%;
+	margin-top: -187px;
+	left: 50%;
+	margin-left: -190px;
+}
+
+
+/*leftText*/
+.leftText{
+    position: absolute;
+    bottom: 250px;
+    left: -450px;
+    transform: rotate(270deg);
+    font-weight: 200;
+    font-size: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 900; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 100px auto; /* 15% from the top and centered */
+	width: 1200px; /* Could be more or less, depending on screen size */ 
+	position: relative;
+}
+.modalText img{}
+.site{
+	text-align: left;
+	position: absolute;
+	top: 410px;
+	left: 120px;
+	border: 1px solid rgba(240, 240, 240, 0.2);
+    transition:all 0.9s, color 0.3s;
+    width: 140px;
+    background: url(../images/main_icon_go.png) no-repeat 105px center;
+}
+.site a{
+	color: #eee;
+	font-size: 12px;
+	font-weight: 100;
+	padding: 10px;
+    padding-left: 20px;
+}
+.site:hover{color:#fff;}
+.hover:hover{ box-shadow:200px 0 0 0 rgba(203,40,63,0.5) inset; }
+
+/* The Close Button */
+.close {
+	color: #fff;
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	position: absolute;
+	top: -90px;
+	right: -350px;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/*portfolio*/
+.portfolio{
+    padding-bottom: 580px;
+	position: relative;
+}
+
+.portfolio h2{
+    font-size: 80px;
+    line-height: 70px;
+    display: inline-block;
+    position: relative;
+}
+.portfolio h2 p{
+    letter-spacing: 5px;
+}
+.portfolio h2:after{
+    content: "";
+    display: block;
+    width: 400px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -50px;
+}
+
+/*portfolio-contents*/
+.portconWrap{
+    position: relative;
+}
+
+.portCon{
+    float: left;
+    margin-top: 40px;
+    margin-right: 40px;
+	width: 580px;
+	height: 650px;
+	overflow: hidden; 
+}
+.portCon img{
+    display: block;
+	-webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1); 
+    -o-transform:scale(1);  
+    transform:scale(1);
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s;
+}
+.portCon img:hover{
+	-webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);   
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+}
+.portconWrap .portCon1{
+    margin-top: 100px;
+}
+.portconWrap .portCon2{
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    bottom: 690px;
+}
+.portconWrap .portCon3{
+    height: 485px;
+	line-height: 485px;
+    letter-spacing: -1px;
+    background: #ddd;
+    text-align: center;
+	position: relative;
+	font-size: 40px;
+}
+/*.portconWrap .portCon3 p{
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	left: 50%;
+	margin-left: -143px;
+}*/
+.portconWrap .portCon4{
+    margin-right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*rightText*/
+.rightText{
+	position: absolute;
+	bottom: 300px;
+	right: -350px;
+	transform: rotate(90deg);
+	font-weight: 200;
+    font-size: 20px;
+}
+
+/*what i do*/
+.whatIdo{
+    padding-bottom: 580px;
+}
+.whatIdoTitle{
+    width: 235px;
+    text-align: right;
+}
+.whatIdoTitle h2{
+    font-size: 80px;
+    line-height: 90px;
+	margin-bottom: -22px;
+}
+.whatIdoTitle h2 span{
+    letter-spacing: 25px;
+}
+.whatIdoTitle p{
+    font-size: 80px;
+    font-weight: 600;
+    position: relative;
+	letter-spacing: -2px;
+    line-height: 100px;
+}
+.whatIdoTitle p:after{
+    content: "";
+    display: block;
+    width: 400px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -40px;
+}
+
+/*Radial Progress Bars*/
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+    padding: 1em;
+	padding-top: 50px;
+}
+
+section {
+    text-align: center;
+}
+.radial{
+	float: left;
+	margin: 0 30px;
+	margin-top: 10px;
+}
+.radial p{
+    line-height: 20px;
+	font-size: 20px;
+	font-weight: 200;
+}
+svg.radial-progress {
+    max-width: 200px;
+    padding: 1em;
+    transform: rotate(-90deg);
+    width: 100%;
+}
+svg.radial-progress circle {
+    fill: rgba(0,0,0,0);
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129; /* Circumference */
+    stroke-width: 7;
+}
+svg.radial-progress circle.incomplete {
+    opacity: 0.25;
+}
+svg.radial-progress circle.complete {
+    stroke-dasharray: 219.91148575129; /* Circumference */
+}
+svg.radial-progress text {
+    fill: #000;
+    font-size: 13px;
+    text-anchor: middle;
+}
+
+.radial01 svg.radial-progress circle {
+    stroke: #00c8ff;
+}
+
+/* Secondary */
+.radial02 svg.radial-progress circle {
+    stroke: #ffc600;
+}
+
+/* Tertiary */
+.radial03 svg.radial-progress circle {
+    stroke: #bf5fc8;
+}
+
+/* Quaternary */
+.radial04 svg.radial-progress circle {
+    stroke: #fd6470;
+}
+
+
+/*Progress Bars*/
+.zt-span6{
+	margin-top: 120px;
+}
+.zt-skill-bar {
+	color: #fff;
+    font-size: 11px;
+    line-height: 25px;
+    height: 25px;
+    margin-bottom: 25px;
+	background-color: rgba(0,0,0,0.1);
+	-webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+	width: 940px;
+	margin-left: 180px;
+	text-indent: -9999px;
+}
+.zt-skill-bar:last-child{
+	margin-bottom: 0;
+}
+.zt-skill-bar * {
+    webkit-transition: all 2.5s ease;
+    -moz-transition: all 2.5s ease;
+    -ms-transition: all 2.5s ease;
+    -o-transition: all 2.5s ease;
+    transition: all 2.5s ease;
+}
+.zt-skill-bar div {
+	background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    position: relative;
+    padding-left: 25px;
+    width: 0;
+	-webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms- border-radius: 2px;
+    border-radius: 2px;
+}
+.zt-span6 span,zt-skill-bar{
+	float: left;
+}
+.character{
+	margin-bottom: 30px;
+}
+.character4{
+	margin-bottom: 0;
+}
+.zt-span6 span{
+	margin-left: 80px;
+	line-height: 25px;
+	font-size: 20px;
+	font-weight: 200;
+}
+
+/*contact*/
+#contact{
+    height: 970px;
+    background: #222222;
+}
+.contact{
+	position: relative;
+    color: #fff;
+}
+.contact h2{
+    font-size: 80px;
+    line-height: 80px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    letter-spacing: -1px;
+    padding-top: 170px;
+}
+.contact h2 p{
+    letter-spacing: 30px;
+}
+.contact h2 span{
+    letter-spacing: 12px;
+}
+.contact h2:after{
+    content: "";
+    display: block;
+    width: 700px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -50px;
+}
+
+/*contactBox*/
+.contactBox{}
+
+.contactBox1{
+	padding-top:200px; 
+}
+.contactBox1,.contactBox2{
+	float: left;
+}
+.contactBox1 h3{}
+
+.contactBox2{
+	float: right;
+	padding-top: 560px;
+	padding-right: 200px;
+}
+
+.contactBox2 h3{
+    font-size: 30px;
+}
+.contactBox2 span{
+	font-weight: 200;
+	font-size: 18px;
+}
+.contactBox2 p{
+    margin: 30px 0;
+	font-weight: 200;
+	font-size: 18px;
+}
+
+/*e-mail form*/
+form{
+	width: 550px;
+}
+aside {
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 2em;
+}
+textarea {
+	width: 100%;
+	height: 300px;
+	resize: none;
+	color: #222;
+	background: rgba(255,255,255,0.7);
+	border: 0;
+}
+label{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  margin: 30px 0 5px 0;
+}
+input{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  font-size: 15px;
+  width: 220px;
+  padding: 5px 2px;
+  color: #fff
+}
+.pure-group{
+	border: 0;
+}
+.content-head {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2em 0 1em;
+}
+.is-center {
+  text-align: center;
+}
+/* button 효과(Bubble Float Top) */
+.hvr-bubble-float-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  height: 30px;
+  background: #e1e1e1;
+  border: 0;
+  border-radius: 5px;
+}
+.hvr-bubble-float-top:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  top: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #e1e1e1 transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-bubble-float-top:hover, .hvr-bubble-float-top:focus, .hvr-bubble-float-top:active {
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+.hvr-bubble-float-top:hover:before, .hvr-bubble-float-top:focus:before, .hvr-bubble-float-top:active:before {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.honeypot-field {
+  display: none;
+}
+.name,.email{
+	display: inline-block;
+	padding-top: 160px;
+}
+.name{
+	margin-right: 40px;
+}
+.thankyou_message{
+	text-align: center;
+	background: url(../images/mailface.png) no-repeat 0px 30px;
+	width: 373px;
+	height: 590px;
+}
+.thankyou_message h4{
+	font-weight: 600;
+	font-size: 28px;
+	color: #222;
+	padding-top: 440px;
+}
+.thankyou_message p{
+	margin-top: 20px;
+	color: #222;
+}
+/*e-mail form*/
