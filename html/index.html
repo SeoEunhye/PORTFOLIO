@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>PORTFOLIO INTRO</title>
+  <link rel="stylesheet" type="text/css" href="css/index_style.css">
+  <link rel="stylesheet" type="text/css" href="css/media_index.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <meta http-equiv="refresh" content="10; url=main.html">
+</head>
+
+<body>
+	<div class="cover">
+		<div class="cover-inner">
+			<div class="intro">
+				<div class="counter" data-count="26">0</div>
+				<img class="myFace" src="images/myface1.png" alt="이미지">
+				<div class="outline">years.</div>
+			</div>
+		</div>
+	</div>
+<script>
+	$(document).ready(function(){
+		$('.blinkEle').hide();
+		var face=1;
+		var number;
+		number=setInterval(function(){
+			face++;
+			$('.myFace').attr('src','images/myface'+face+'.png');
+			if(face==5){
+				clearInterval(number);
+				setInterval(function(){
+					$('.blinkEle').toggle();
+				},500)
+				$(".myFace").wrap("<a href='main.html'></a>")
+			}
+		},500);
+		number;
+	
+	$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+    duration: 2000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  })  
+})
+		})
+
+</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script>
+$(document).ready(function(){
+	TweenLite.to($("html"), 6, {backgroundColor:"#fff"});
+	
+})
+</script>
+<img class="blinkEle" src="images/click.png" alt="클릭">
+
+</body>
+</html>
